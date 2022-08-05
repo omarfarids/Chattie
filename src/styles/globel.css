@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.sent{
+    background-color: rgb(30, 144, 255);
+    color: #fff;
+    border-radius: 20px 20px 2px 20px;
+    padding-left: 20px;
+    width: 60%;
+    align-self: flex-end;
+    word-wrap: break-word;
+}
+
+.received{
+    background-color: rgb(230, 230, 230);
+    color: #000;
+    border-radius: 20px 20px 20px 2px;
+    padding-left: 20px;
+    width: 60%;
+    word-wrap: break-word;
+}
+
+.user-name{
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.read-only{
+  font-weight: bold;
+  font-size: 12px;
+  background-color: rgb(220, 220, 220);
+  width: fit-content;
+  align-self: center;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+  }
+  /* Track */
+  .scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  /* Handle */
+  .scroll::-webkit-scrollbar-thumb {
+    background: rgb(220, 220, 220);
+  }
+  /* Handle on hover */
+  .scroll::-webkit-scrollbar-thumb:hover {
+    background: rgb(158, 158, 158);
+  }
+
+  @keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid #383636; /* Black */
+    border-radius: 50%;
+    animation: spinner 1.5s linear infinite;
+    position:absolute;
+    top:50%;
+    left: calc(50% - 25px);
+    transform: translate(-50% , -50%);
+}

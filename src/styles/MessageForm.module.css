@@ -1,0 +1,35 @@
+.inputField{
+    width: 80%;
+    padding: .5rem 1rem;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 20px;
+}
+
+.inputButton{
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 20px;
+    margin-left: 5px;
+}
+
+.messageForm{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto 5px;
+    width: 95%;
+}
+
+@media (min-width:480px){
+    .inputField{
+        width: 90%;
+    }
+}
+
+@media (min-width:767px){
+    .inputField{
+        width: 93%;
+    }
+}

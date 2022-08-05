@@ -1,0 +1,14 @@
+.chat{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width:90%;
+    margin: 1rem auto;
+    height: 77vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.025);
+    border-radius: 5px;
+}
+
