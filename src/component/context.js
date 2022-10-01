@@ -41,6 +41,7 @@ function AppProvider({children}){
     const [signup , setSignup] = useState(false)
     const [sender , setSender] = useState('')
     const [chatRoom , setChatRoom] = useState('messages')
+    const [isDarkMode , setIsDarkMode] = useState(false)
     
     
     // app refs 
@@ -65,7 +66,7 @@ function AppProvider({children}){
         e.preventDefault()
         if(chatUser){
             for(let i = 0;i < chatUser.length;i++){
-                if(chatUser[i].id === user.userID && chatUser[i].password === user.password){
+                if(chatUser[i].id === user.userID.toLowerCase() && chatUser[i].password === user.password){
                     setSender(chatUser[i].sender)
                     setIsSignIn(true)
                 }
@@ -82,7 +83,7 @@ function AppProvider({children}){
         e.preventDefault();
         addDoc(userRef,{
             sender:sender + Math.floor((Math.random()+1)*100_000),
-            id:user.userID,
+            id:user.userID.toLowerCase(),
             password:user.password
         })
         localStorage.setItem(user.userID,user.password);
@@ -127,7 +128,9 @@ function AppProvider({children}){
                                         setSender,
                                         setChatRoom,
                                         chatUser,
-                                        bottom}}>
+                                        bottom,
+                                        isDarkMode,
+                                        setIsDarkMode}}>
         {children}
     </AppContext.Provider>
 }
