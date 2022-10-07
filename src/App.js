@@ -6,6 +6,7 @@ import ChatRoom from './component/ChatRoom';
 import Loading from './component/Loading';
 import Header from './component/Header';
 import './styles/globel.css';
+import Footer from './component/Footer';
 
 
 
@@ -18,10 +19,11 @@ function App() {
   }
 
   if(!isSignIn){
-    return <>
+    return <div className='relative'>
               <ChatRoom />
               <Signin />
-            </>
+              <Footer />
+            </div>
     
   }
       
